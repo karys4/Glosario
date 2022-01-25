@@ -1,0 +1,8 @@
+Javascript:
+
+* const -> Declara una constante
+* let -> Declara una variable 
+* <script src="./script.js"></script> -> Hace referencia a el archivo Javascript desde HTML
+* == Compara solamente valor
+* === Compara valor y tipo de dato
+* Template String: console.log(`Mi nombre es ${nombre}`);
