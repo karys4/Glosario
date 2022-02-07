@@ -1,0 +1,6 @@
+Java:
+
+* JVM: Java Virtual Machine actúa como un motor en tiempo de ejecución para ejecutar aplicaciones Java.
+* JDK: Java Development Kit es un software que provee herramientas de desarrollo para la creación de programas en Java.
+* OpenJDK: OpenJDK es la versión libre de la plataforma de desarrollo Java bajo concepto de lenguaje orientado a objetos.
+* Sdkman: es una herramienta para manejar múltiples versiones de distintos SDKs en sistemas Unix (aunque también existe una versión alternativa para Windows).

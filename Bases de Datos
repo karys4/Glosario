@@ -1,0 +1,6 @@
+Bases de Datos:
+
+* DBMS -> Un sistema manejador de bases de datos (SGBD, por sus siglas en inglés) o DataBase Management System (DBMS) es una colección de software muy específico, orientado al manejo de base de datos, cuya función es servir de interfaz entre la base de datos, el usuario y las distintas aplicaciones utilizadas. Oracle, Mysql, PostgreSQL.
+* Primary Key -> Llave Primaria.
+* Foreign Key -> Llave Foránea.
+* CRUD -> Create, Read, Update, Delete.
