@@ -1,0 +1,28 @@
+React: Librería de Javascript, open source, diseñada para crear interfaces de usuario.
+
+Componente: Parte de la UI que es independiente y reusable (son como bloques de legos).
+            * Funcional -> Función de JS/ES6 que retorna un elemento de React (JSX), similar a elementos HTML.
+                           Características: 
+                                            * Debe retornar un elemento de React (JSX) 
+                                            * Debe comenzar con una letra mayúscula
+                                            * Puede recibir valores si es necesario
+            
+            * De Clase ->  Clase de ES6 (JS moderno) que retorna un elemento JSX.
+                            Características: 
+                                            * Debe extender React.Component 
+                                            * Debe tener un método render() para retornar un elemento JSX
+                                            * Puede recibir valores si es necesario
+
+Props: Argumentos que puede recibir un componente de React. Solo pueden ser enviados de padre a hijo.
+
+Estado (State): Representación en JS del conjunto de propiedades de un componente y sus valores actuales. 
+                Nota: En este concepto "propiedades" NO se refiere a los props, sino a información que se 
+                      representa sobre el componente.
+
+Hooks: Función especial que permite trabajar con estados en componentes funcionales y otros aspectos de React.
+
+       Son una nueva Característica en React 16.8. Estos permiten usar el estado 
+       y otras Características de React sin escribir una clase.    
+       Ahora si se puede asignar y actualizar el estado de un componente funcional en React con los Hooks.
+
+Event Listener: Función (Event Handler) en JS que es ejecutada cuando ocurre un evento específico.
