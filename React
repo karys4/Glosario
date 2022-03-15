@@ -26,3 +26,13 @@ Hooks: Función especial que permite trabajar con estados en componentes funcion
        Ahora si se puede asignar y actualizar el estado de un componente funcional en React con los Hooks.
 
 Event Listener: Función (Event Handler) en JS que es ejecutada cuando ocurre un evento específico.
+
+JSX (Javascript XML): Nos permite describir en JS como se verán los componentes usando una estructura similar a HTML.
+                      JSX es opcional.
+
+Elemento: Unidades más pequeñas en React. Definen lo que se ve en la pantalla, son más pequeños que un componente.
+          Nota: Los componentes en React están "hechos" de elementos.
+
+React DOM: Paquete que facilita la interacción y actualización del DOM en aplicaciones React.
+
+DOM (Document Object Model): Representación en el navegador de todos los elementos que conforman una página o app web.
