@@ -36,3 +36,8 @@ Elemento: Unidades más pequeñas en React. Definen lo que se ve en la pantalla,
 React DOM: Paquete que facilita la interacción y actualización del DOM en aplicaciones React.
 
 DOM (Document Object Model): Representación en el navegador de todos los elementos que conforman una página o app web.
+
+
+COMANDOS ->
+            npx create-react-app nombredemicarpeta
+            npm start 
