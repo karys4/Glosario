@@ -78,4 +78,34 @@ Javascript:
 
 - Stacktrace -> Es la secuencia de llamadas que se fueron dando durante la ejecución de un programa hasta que sucedió un excepción 
 o un error inesperado. 
-  
+
+- Tipado dinámico -> Las variables no tienen un tipo de dato particular asociado, podemos asignarle y re-asignarle cualquier valor a cualquier variable.
+
+- Tipado débil -> Podemos realizar operaciones entre valores de distintos tipos.
+
+- Coerción de tipos -> Conversión implícita de tipos que realiza el motor de JS para poder concretar una operación. 
+
+- Tipo de una variable -> Se determina cuando se ejecute la línea de código que contiene a esa variable. Depende de la operación que se está realizando con ella. 
+
+- Tipos de datos primitivos -> Son tipos de datos básicos, no poseen métodos ni propiedades, son inmutables. 
+                               strings, number, boolean, null, undefined, symbol, bigint.
+- NaN -> Not a Number, es de tipo number y es el resultado de cómputos inválidos. 
+
+- Valores falsos -> Valores que van a ser evaluados como false (además de false): '', 0, null y NaN. Cualquier otro valor va a ser verdadero.
+
+- Object Wrapper -> Objeto que envuelve a un valor primitivo cuando queremos acceder a una propiedad o llamar a un método del mismo.
+  Es temporal porque el motor lo utiliza solo por una fracción de segundo, después lo desecha, lo borra de la memoria.
+
+Null -> Es el tipo de dato para representar la ausencia de valor. Sirve para decir que una variable no contiene nada, está vacía
+         o que todavía no conocemos su valor. Es un tipo de dato aparte y que solo tiene un valor posible: null.
+
+undefined -> Significa tipo de dato desconocido. Es un valor que deberíamos dejar para que el motor de JS asigne automáticamente.
+            Se muestra undefined cuando aún no se le dio ningún valor, no se recibió ese parámetro,
+            una función se terminó de ejecutar hasta el final sin devolver ningún valor.
+
+
+
+
+
+
+
