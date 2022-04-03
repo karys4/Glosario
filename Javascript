@@ -103,7 +103,9 @@ undefined -> Significa tipo de dato desconocido. Es un valor que deberíamos dej
             Se muestra undefined cuando aún no se le dio ningún valor, no se recibió ese parámetro,
             una función se terminó de ejecutar hasta el final sin devolver ningún valor.
 
+HEAP -> Es el área de memoria destinada para almacenar objetos.
 
+Referencia -> Es la posición de memoria que se usa para acceder a un objeto. 
 
 
 
