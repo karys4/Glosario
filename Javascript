@@ -73,3 +73,9 @@ Javascript:
 - Scope -> Se refiere a el alcance que tiene una variable dentro del código, puede ser Global, local.
 
 - Lexical Scope / ámbito léxico -> En JavaScript las funciones tienen su propio ámbito léxico, lo que quiere decir que depende de cómo son declaradas en el código y no de cuando se ejecutan.
+
+- Call Stack (Pila de ejecución) -> A las pilas también se les conoce como LIFO (Last In First Out)
+
+- Stacktrace -> Es la secuencia de llamadas que se fueron dando durante la ejecución de un programa hasta que sucedió un excepción 
+o un error inesperado. 
+  
