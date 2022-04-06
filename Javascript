@@ -107,7 +107,39 @@ HEAP -> Es el área de memoria destinada para almacenar objetos.
 
 Referencia -> Es la posición de memoria que se usa para acceder a un objeto. 
 
+import / export: Con estas palabras se puede importar y exportar módulos. 
 
+props -> son la colección de datos que un componente recibe del contenedor padre, y que pueden usarse para definir los elementos de React que retornará el componente.
+
+
+Pilares de la POO:
+Abstracción -> Es una manera de reducir la complejidad y permitir un diseño e implementación más eficientes en sistemas de software complejos.
+
+Encapsulamiento -> Es guardar, proteger, guardar o limitar el acceso de cierto atributos y/o propiedades en nuestros prototipos y objetos.
+                Cuando hablamos de **encapsulamiento **hablamos de:
+                Esconder métodos y atributos 👻
+                No permitir la alteración de métodos y atributos ❌
+
+                Encapsulamiento en JavaScript
+                No permitir la alteración de métodos y atributos ❌
+                
+                Formas de aplicar encapsulamiento en JavaScript
+                Getters y setters 🖐
+                Namespaces 🙂
+                Object.defineProperties 🎈
+                Módulo de ES6 🤝
+Nota: Se hace uso de los métodos get y set para limitar la modificación de determinados parámetros del prototipo clase.
+TODO: Investigar más respecto a como se aplican.
+
+
+
+Herencia -> Palabra reservada "extends, 
+            Super: La palabra clave super es usada para acceder y llamar funciones del padre de un objeto.
+
+Polimorfismo -> Permite a nuestras subclases cambiar o anular los comportamientos de los métodos y atributos del prototipo madre, de la clase madre. 
+                Aunque herede las propiedades, el polimorfismo permite cambiar su comportamiento.
+                Polimorfismo de Inclusión (JS): La habilidad para redefinir por completo el método de una superclase en una subclase.
+                El polimorfismo permite sobrescribir métodos. 
 
 
 
