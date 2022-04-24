@@ -83,4 +83,11 @@ git push --force (Se refleja el cambio en github)
 Hacer push de una rama local a github (Pushes a local branch to the origin remote):
 git push origin <branch_name>
 
-prueba de push 
+Issue de token:
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+Solución:
+https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/
+NOTA: Importante agregar el token recien generado en Password
+$ git clone https://github.com/username/repo.git
+Username: your_username
+Password: your_token
