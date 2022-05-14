@@ -161,3 +161,19 @@ Es por esto que cuando nosotros asignamos una variable que tiene como valor un o
 
 Shallow Copy: Se refiere a la forma de crear un nuevo objeto a partir de las propiedades de otro. 
               Esta copia solo se hace a un nivel alto, no se hace con objetos dentro de objetos (nested objects), lo que provoca que la modificación de una de sus propiedades, modifique el objeto principal.
+
+Recursividad: Es cuando una función se llama a si misma y crea una nueva ejecución de la función. 
+Ejemplo:
+
+const numeritos = [8, 3, 4, 5, 0, 1, 30, 40];
+
+function recursiva(numbersArray) {
+  if (numbersArray.length != 0) {
+    const firstNum = numbersArray[0];
+    console.log(firstNum);
+    numbersArray.shift();
+    recursiva(numbersArray);
+  }
+}
+
+recursiva(numeritos);
