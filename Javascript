@@ -157,4 +157,7 @@ Las variables que no tienen un valor de tipo objeto, son almacenadas en la memor
 
 El valor (objeto) es guardada en la memoria heap
 En la memoria stack se guarda un apuntador (pointer) hacia la memoria heap
-Es por esto que cuando nosotros asignamos una variable que tiene como valor un objeto, a una nueva variable, lo unico que hacemos es asignar el apuntador. Es así que al modificar el objeto, en cualquiera de las dos variables, los cambios se reflejan en las dos
+Es por esto que cuando nosotros asignamos una variable que tiene como valor un objeto, a una nueva variable, lo único que hacemos es asignar el apuntador. Es así que al modificar el objeto, en cualquiera de las dos variables, los cambios se reflejan en las dos
+
+Shallow Copy: Se refiere a la forma de crear un nuevo objeto a partir de las propiedades de otro. 
+              Esta copia solo se hace a un nivel alto, no se hace con objetos dentro de objetos (nested objects), lo que provoca que la modificación de una de sus propiedades, modifique el objeto principal.
