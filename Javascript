@@ -72,24 +72,40 @@ Javascript:
 
 - Scope -> Se refiere a el alcance que tiene una variable dentro del código, puede ser Global, local.
 
+  Global: Las variables globales pueden ser accedidas desde cualquier lugar de nuestro programa. Son variables declaradas fuera de toda función o bloque de código, sin importar si las declaramos con var, let o const.
+  Las variables globales, van a estar en memoria durante toda la ejecución del programa.
+
+  Local: Las variables locales solo se pueden acceder desde una parte de de nuestro programa.
+  Local de función: Accesibles dentro de toda la función pero no fuera de la misma.
+  Variables declaradas con var.
+  Local de bloque: Accesibles dentro de todo el bloque, pero no fuera del mismo. Variables declaradas con let o const.
+
+  Las variables locales van a estar en memoria durante la ejecución de la función o bloque.
+
+  Nota: Declarar las variables con el scope más reducido posible.
+
 - Lexical Scope / ámbito léxico -> En JavaScript las funciones tienen su propio ámbito léxico, lo que quiere decir que depende de cómo son declaradas en el código y no de cuando se ejecutan.
+
+El intérprete de JavaScript funciona desde el ámbito de ejecución actual y funciona hasta encontrar la variable en cuestión. Si la variable no se encuentra en ningún ámbito, se genera una excepción.
+
+Este tipo de búsqueda se llama ámbito léxico. El alcance de una variable se define por su ubicación dentro del código fuente, y las funciones anidadas tienen acceso a las variables declaradas en su alcance externo. No importa de dónde se llame una función, o incluso cómo se llama, su alcance léxico depende solo de dónde se declaró la función.
 
 - Call Stack (Pila de ejecución) -> A las pilas también se les conoce como LIFO (Last In First Out)
 
-- Stacktrace -> Es la secuencia de llamadas que se fueron dando durante la ejecución de un programa hasta que sucedió un excepción 
-o un error inesperado. 
+- Stacktrace -> Es la secuencia de llamadas que se fueron dando durante la ejecución de un programa hasta que sucedió un excepción
+  o un error inesperado.
 
 - Tipado dinámico -> Las variables no tienen un tipo de dato particular asociado, podemos asignarle y re-asignarle cualquier valor a cualquier variable.
 
 - Tipado débil -> Podemos realizar operaciones entre valores de distintos tipos.
 
-- Coerción de tipos -> Conversión implícita de tipos que realiza el motor de JS para poder concretar una operación. 
+- Coerción de tipos -> Conversión implícita de tipos que realiza el motor de JS para poder concretar una operación.
 
-- Tipo de una variable -> Se determina cuando se ejecute la línea de código que contiene a esa variable. Depende de la operación que se está realizando con ella. 
+- Tipo de una variable -> Se determina cuando se ejecute la línea de código que contiene a esa variable. Depende de la operación que se está realizando con ella.
 
-- Tipos de datos primitivos -> Son tipos de datos básicos, no poseen métodos ni propiedades, son inmutables. 
-                               strings, number, boolean, null, undefined, symbol, bigint.
-- NaN -> Not a Number, es de tipo number y es el resultado de cómputos inválidos. 
+- Tipos de datos primitivos -> Son tipos de datos básicos, no poseen métodos ni propiedades, son inmutables.
+  strings, number, boolean, null, undefined, symbol, bigint.
+- NaN -> Not a Number, es de tipo number y es el resultado de cómputos inválidos.
 
 - Valores falsos -> Valores que van a ser evaluados como false (además de false): '', 0, null y NaN. Cualquier otro valor va a ser verdadero.
 
@@ -97,52 +113,50 @@ o un error inesperado.
   Es temporal porque el motor lo utiliza solo por una fracción de segundo, después lo desecha, lo borra de la memoria.
 
 Null -> Es el tipo de dato para representar la ausencia de valor. Sirve para decir que una variable no contiene nada, está vacía
-         o que todavía no conocemos su valor. Es un tipo de dato aparte y que solo tiene un valor posible: null.
+o que todavía no conocemos su valor. Es un tipo de dato aparte y que solo tiene un valor posible: null.
 
 undefined -> Significa tipo de dato desconocido. Es un valor que deberíamos dejar para que el motor de JS asigne automáticamente.
-            Se muestra undefined cuando aún no se le dio ningún valor, no se recibió ese parámetro,
-            una función se terminó de ejecutar hasta el final sin devolver ningún valor.
+Se muestra undefined cuando aún no se le dio ningún valor, no se recibió ese parámetro,
+una función se terminó de ejecutar hasta el final sin devolver ningún valor.
 
 HEAP -> Es el área de memoria destinada para almacenar objetos.
 
-Referencia -> Es la posición de memoria que se usa para acceder a un objeto. 
+Referencia -> Es la posición de memoria que se usa para acceder a un objeto.
 
-import / export: Con estas palabras se puede importar y exportar módulos. 
+import / export: Con estas palabras se puede importar y exportar módulos.
 
 props -> son la colección de datos que un componente recibe del contenedor padre, y que pueden usarse para definir los elementos de React que retornará el componente.
-
 
 Pilares de la POO:
 Abstracción -> Es una manera de reducir la complejidad y permitir un diseño e implementación más eficientes en sistemas de software complejos.
 
 Encapsulamiento -> Es guardar, proteger, guardar o limitar el acceso de cierto atributos y/o propiedades en nuestros prototipos y objetos.
-                Cuando hablamos de **encapsulamiento **hablamos de:
-                Esconder métodos y atributos 👻
-                No permitir la alteración de métodos y atributos ❌
+Cuando hablamos de **encapsulamiento **hablamos de:
+Esconder métodos y atributos 👻
+No permitir la alteración de métodos y atributos ❌
 
                 Encapsulamiento en JavaScript
                 No permitir la alteración de métodos y atributos ❌
-                
+
                 Formas de aplicar encapsulamiento en JavaScript
                 Getters y setters 🖐
                 Namespaces 🙂
                 Object.defineProperties 🎈
                 Módulo de ES6 🤝
+
 Nota: Se hace uso de los métodos get y set para limitar la modificación de determinados parámetros del prototipo clase.
 TODO: Investigar más respecto a como se aplican.
 
+Herencia -> Palabra reservada "extends,
+Super: La palabra clave super es usada para acceder y llamar funciones del padre de un objeto.
 
-
-Herencia -> Palabra reservada "extends, 
-            Super: La palabra clave super es usada para acceder y llamar funciones del padre de un objeto.
-
-Polimorfismo -> Permite a nuestras subclases cambiar o anular los comportamientos de los métodos y atributos del prototipo madre, de la clase madre. 
-                Aunque herede las propiedades, el polimorfismo permite cambiar su comportamiento.
-                Polimorfismo de Inclusión (JS): La habilidad para redefinir por completo el método de una superclase en una subclase.
-                El polimorfismo permite sobrescribir métodos. 
+Polimorfismo -> Permite a nuestras subclases cambiar o anular los comportamientos de los métodos y atributos del prototipo madre, de la clase madre.
+Aunque herede las propiedades, el polimorfismo permite cambiar su comportamiento.
+Polimorfismo de Inclusión (JS): La habilidad para redefinir por completo el método de una superclase en una subclase.
+El polimorfismo permite sobrescribir métodos.
 
 static -> Palabra reservada que nos permite acceder a los atributos sin crear un objeto o una instancia de un prototipo (clase).
-          Nota: El prototipo Object tiene métodos estáticos, por ejemplo(Object.keys, Object.getOwnPropertyNames,Object.entries(), Object.getOwnPropertyDescriptors())).
+Nota: El prototipo Object tiene métodos estáticos, por ejemplo(Object.keys, Object.getOwnPropertyNames,Object.entries(), Object.getOwnPropertyDescriptors())).
 
 Las variables son referencias a un espacio en memoria.
 🎩 Los navegadores web usan dos tipos de memorias: Stack y Heap.
@@ -159,21 +173,25 @@ El valor (objeto) es guardada en la memoria heap
 En la memoria stack se guarda un apuntador (pointer) hacia la memoria heap
 Es por esto que cuando nosotros asignamos una variable que tiene como valor un objeto, a una nueva variable, lo único que hacemos es asignar el apuntador. Es así que al modificar el objeto, en cualquiera de las dos variables, los cambios se reflejan en las dos
 
-Shallow Copy: Se refiere a la forma de crear un nuevo objeto a partir de las propiedades de otro. 
-              Esta copia solo se hace a un nivel alto, no se hace con objetos dentro de objetos (nested objects), lo que provoca que la modificación de una de sus propiedades, modifique el objeto principal.
+Shallow Copy: Se refiere a la forma de crear un nuevo objeto a partir de las propiedades de otro.
+Esta copia solo se hace a un nivel alto, no se hace con objetos dentro de objetos (nested objects), lo que provoca que la modificación de una de sus propiedades, modifique el objeto principal.
 
-Recursividad: Es cuando una función se llama a si misma y crea una nueva ejecución de la función. 
+Recursividad: Es cuando una función se llama a si misma y crea una nueva ejecución de la función.
 Ejemplo:
 
 const numeritos = [8, 3, 4, 5, 0, 1, 30, 40];
 
 function recursiva(numbersArray) {
-  if (numbersArray.length != 0) {
-    const firstNum = numbersArray[0];
-    console.log(firstNum);
-    numbersArray.shift();
-    recursiva(numbersArray);
-  }
+if (numbersArray.length != 0) {
+const firstNum = numbersArray[0];
+console.log(firstNum);
+numbersArray.shift();
+recursiva(numbersArray);
+}
 }
 
 recursiva(numeritos);
+
+RORO: es un patrón de diseño que consiste en crear una función que devuelve un objeto.
+RO -> Recibir un objeto
+RO -> Retornar un objeto
