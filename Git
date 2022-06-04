@@ -87,7 +87,9 @@ Issue de token:
 remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
 Solución:
 https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/
-NOTA: Importante agregar el token recien generado en Password
+
+Ir a github: Settings -> Developer settings -> Personal Access Tokens -> Generate new token
+
 $ git clone https://github.com/username/repo.git
 Username: your_username
-Password: your_token
+Password: your_token (token recien generado en github)
