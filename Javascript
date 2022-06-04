@@ -90,6 +90,28 @@ El intérprete de JavaScript funciona desde el ámbito de ejecución actual y fu
 
 Este tipo de búsqueda se llama ámbito léxico. El alcance de una variable se define por su ubicación dentro del código fuente, y las funciones anidadas tienen acceso a las variables declaradas en su alcance externo. No importa de dónde se llame una función, o incluso cómo se llama, su alcance léxico depende solo de dónde se declaró la función.
 
+- Closure: Las funciones anidadas que recuerdan el conjunto de variables a las que podían acceder, por más que se les invoque desde otro lugar, desde otro scope.
+
+Para crear una closure necesitamos de 3 ingredientes:
+
+- Una función que se encuentre dentro de otra función, es decir una función anidada
+- Alguna variable que se encuentre dentro de la función más grande y que la función de adentro la utilice de alguna manera.
+- Invocar a la función interna pero no desde el scope donde está escrita.
+
+Ejemplo:
+function crearContador() {
+let contador = 0;
+
+return function incrementar() {
+contador = contador + 1;
+return contador;
+};
+}
+
+const contador1 = crearContador();
+
+Referencia: https://www.youtube.com/watch?v=JXG_gQ0OF74&ab_channel=LaCocinadelC%C3%B3digo
+
 - Call Stack (Pila de ejecución) -> A las pilas también se les conoce como LIFO (Last In First Out)
 
 - Stacktrace -> Es la secuencia de llamadas que se fueron dando durante la ejecución de un programa hasta que sucedió un excepción
