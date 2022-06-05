@@ -48,8 +48,17 @@ Javascript:
   procesan los mensajes de la cola. Con cada ‘tick’ del bucle de eventos, se procesa un nuevo
   mensaje.
 
-- Hoisting -> Sugiere que las declaraciones de variables y funciones son físicamente movidas al comienzo del
+- Hoisting (Elevación) -> Sugiere que las declaraciones de variables y funciones son físicamente movidas al comienzo del
   código en tiempo de compilación.
+
+  ¿Qué se eleva?
+
+  - var (solo la declaración)
+  - function (se elevan por completo)
+  - import estáticos (se elevan por completo)
+  - class (NO se elevan)
+  - let / const (Se elevan a la temporal dead zone)
+    Referencia: https://www.youtube.com/watch?v=uI6o97A4IrI&ab_channel=LaCocinadelC%C3%B3digo
 
 - DOM -> DOM permite acceder y manipular las páginas XHTML como si fueran documentos XML. De
   hecho, DOM se diseñó originalmente para manipular de forma sencilla los documentos XML.
