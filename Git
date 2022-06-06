@@ -113,6 +113,10 @@ Comandos para mover archivos entre los estados de Git:
 - touch .gitignore 
   www.gitignore.io
 
+GitFlow: Es una una guía que nos da cierto estándares para manejar la ramificación de nuestros proyectos.
+https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+https://danielkummer.github.io/git-flow-cheatsheet/
+
 fatal: remote origin already exists.
 git remote rm origin
 
