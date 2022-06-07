@@ -10,6 +10,12 @@ Línea de Comandos:
     * creates a new directory in the working directory.
 * touch 
     * creates a new file inside the working directory.
+* cat 
+    * Muestra rápidamente en la terminal el contenido de una archivo.
+* history
+    * Muestra toda la historia de comandos que se han escrito
+* !numeroComando
+    * Ejecuta el comando seleccionado del history
 
 
 * ls -a 
