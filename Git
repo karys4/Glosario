@@ -5,7 +5,7 @@ Instalación:
 Opción 1: https://git-scm.com/
 Opción 2: http://git-scm.com/download/mac
 
-En terminal: 
+En terminal:
 git --version
 
 Actualizar git:
@@ -16,16 +16,17 @@ git config --global user.email "tu@email.com"
 git config --global user.name "Tu Nombre"
 
 Primeros pasos:
-git init 
+git init
 git add .
 git commit -m "Soy el comentario de un commit"
 
 Estados de los archivos:
+
 - Archivos Tracked: son los archivos que viven dentro de Git, no tienen cambios pendientes y sus últimas actualizaciones han sido guardadas en el repositorio gracias a los comandos git add y git commit.
 - Archivos Staged: son archivos en Staging. Viven dentro de Git y hay registro de ellos porque han sido afectados por el comando git add, aunque no sus últimos cambios. Git ya sabe de la existencia de estos últimos cambios, pero todavía no han sido guardados definitivamente en el repositorio porque falta ejecutar el comando git commit.
 - Archivos Unstaged: entiéndelos como archivos “Tracked pero Unstaged”. Son archivos que viven dentro de Git pero no han sido afectados por el comando git add ni mucho menos por git commit. Git tiene un registro de estos archivos, pero está desactualizado, sus últimas versiones solo están guardadas en el disco duro.
 - Archivos Untracked: son archivos que NO viven dentro de Git, solo en el disco duro. Nunca han sido afectados por git add, así que Git no tiene registros de su existencia.
-Recuerda que hay un caso muy raro donde los archivos tienen dos estados al mismo tiempo: staged y untracked. Esto pasa cuando guardas los cambios de un archivo en el área de Staging (con el comando git add), pero antes de hacer commit para guardar los cambios en el repositorio haces nuevos cambios que todavía no han sido guardados en el área de Staging (en realidad, todo sigue funcionando igual pero es un poco divertido).
+  Recuerda que hay un caso muy raro donde los archivos tienen dos estados al mismo tiempo: staged y untracked. Esto pasa cuando guardas los cambios de un archivo en el área de Staging (con el comando git add), pero antes de hacer commit para guardar los cambios en el repositorio haces nuevos cambios que todavía no han sido guardados en el área de Staging (en realidad, todo sigue funcionando igual pero es un poco divertido).
 
 Comandos para mover archivos entre los estados de Git:
 
@@ -45,18 +46,20 @@ Comandos para mover archivos entre los estados de Git:
   - adds files from the working directory to the staging area
 - git rm --cached nombreArchivo
   - Sirve para mover el archivo de lo que se agregará en el commit, es cuando por error agregamos archivos a
-  los que no queremos hacer seguimiento.
+    los que no queremos hacer seguimiento.
 - git diff numeroCommit otroNumeroCommit
   - shows the difference between the working directory and the staging area
-  - 
+  -
 - git commit
   - permanently stores file changes from the staging area in the repository
+- git commit -am "Esto es lo mismo que primero hacer add y después commit" Nota: Solo funciona con archivos a los que se les hizo track previamente
 - git log
   - shows a list of all previous commits
 - git log  - -oneline
 - git log - - oneline - -graph
 - git log -1
 - git show
+
   - Muestra los cambios que se han realizado, directamente en la terminal
 
   - Muestra el último commit
@@ -70,14 +73,16 @@ Comandos para mover archivos entre los estados de Git:
 - git add filename_1 filename_2
 - git checkout idCommit
   - Nos permite viajar en el tiempo Podemos volver a cualquier versión anterior de un archivo específico o incluso del proyecto entero
-- git reset idCommit --hard  (Usar este comando con mucho cuidado)
+- git reset idCommit --hard (Usar este comando con mucho cuidado)
   - Borra toda la información que tengamos en el área de staging (y perdiendo todo para siempre)
   - Borra todo. Todo todito, absolutamente todo. Toda la información de los commits y del área de staging se borra del historial.
 - git reset idCommit --soft
+
   - Mantiene allí los archivos del área de staging para que podamos aplicar nuestros últimos cambios pero desde un commit anterior.
   - Borramos todo el historial y los registros de Git pero guardamos los cambios que tengamos en Staging, así podemos aplicar las últimas actualizaciones a un nuevo commit
 
 - git log
+
   - git log --oneline - Te muestra el id commit y el título del commit.
   - git log --decorate- Te muestra donde se encuentra el head point en el log.
   - git log --stat - Explica el número de líneas que se cambiaron brevemente.
@@ -95,7 +100,6 @@ Comandos para mover archivos entre los estados de Git:
   - git log – index.html- Busca los commits en un archivo en específico.
   - git log -S “Por contenido”- Buscar los commits con el contenido dentro del archivo.
   - git log > log.txt - guardar los logs en un archivo txt
-
 
 - git branch -l
   - Lists all a Git project's branches.
