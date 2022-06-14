@@ -56,7 +56,7 @@ Comandos para mover archivos entre los estados de Git:
 - git log
   - shows a list of all previous commits
 - git log  - -oneline
-- git log - - oneline - -graph
+- git log --oneline --graph
 - git log -1
 - git show
 
@@ -101,6 +101,9 @@ Comandos para mover archivos entre los estados de Git:
   - git log -S “Por contenido”- Buscar los commits con el contenido dentro del archivo.
   - git log > log.txt - guardar los logs en un archivo txt
 
+- Crear un tag: git tag -a v1.0 -m "Mi primer tag" 7005953
+- git tag (Muestra la lista de todos los tags)
+
 - git branch -l
   - Lists all a Git project's branches.
 - git branch branch_name
@@ -127,8 +130,8 @@ Comandos para mover archivos entre los estados de Git:
   - Lists a Git project's remotes.
 - git fetch
   - Fetches work from the remote into the local copy.
-- git merge origin/master
-  - Merges origin/master into your local branch.
+- git merge ramaAfusionar
+  - Merges ramaAfusionar en la rama que estoy actualmente.
 - git push origin <branch_name>
   - Pushes a local branch to the origin remote.
 - git checkout -b nombreRama
