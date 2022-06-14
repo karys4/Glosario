@@ -103,6 +103,10 @@ Comandos para mover archivos entre los estados de Git:
 
 - Crear un tag: git tag -a v1.0 -m "Mi primer tag" 7005953
 - git tag (Muestra la lista de todos los tags)
+- git show-ref --tags (Muestra a que commit hace referencia un tag)
+- git push origin --tags (Enviar tag a repo en github)
+- git tag -d nombreTag (Borrar un tag en local)
+- git push origin :refs/tags/nombreTag (Borrar tag en github)
 
 - git branch -l
   - Lists all a Git project's branches.
