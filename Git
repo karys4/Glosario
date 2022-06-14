@@ -125,8 +125,10 @@ Comandos para mover archivos entre los estados de Git:
 - git merge branch_name
   - Used to join file changes from one branch to another.
 - git branch -d branch_name
-
   - Deletes the branch specified.
+- git push origin nombreRama
+
+  - Envía la rama local al repositorio de github
 
 - git clone
   - Creates a local copy of a remote.
