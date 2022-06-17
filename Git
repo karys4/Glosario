@@ -106,7 +106,7 @@ Al crear un stash tomará los archivos que han sido modificados y eliminados. Pa
 Al aplicar un stash este no se elimina, es buena práctica eliminarlo.
 
 - git clean
-Mientras estamos trabajando en un repositorio podemos añadir archivos a él, que realmente no forma parte de nuestro directorio de trabajo, archivos que no se deberían de agregar al repositorio remoto.
+  Mientras estamos trabajando en un repositorio podemos añadir archivos a él, que realmente no forma parte de nuestro directorio de trabajo, archivos que no se deberían de agregar al repositorio remoto.
 
 El comando clean actúa en archivos sin seguimiento, este tipo de archivos son aquellos que se encuentran en el directorio de trabajo, pero que aún no se han añadido al índice de seguimiento de repositorio con el comando add.
 
@@ -120,18 +120,18 @@ $ git clean --dry-run
 Eliminar los archivos listados de no seguimiento.
 $ git clean -f
 
-Nota:  ejecuta git clean --dry-run, y cuando estés seguro de que desea eliminarlos, ejecutas git clean -f
+Nota: ejecuta git clean --dry-run, y cuando estés seguro de que desea eliminarlos, ejecutas git clean -f
 
 Archivos que se hayan modificado o editados git clean no interviene aquí.
 
 - git cherry-pick numeroCommit
-Git Cherry-pick es un comando que permite tomar uno o varios commits de otra rama sin tener que hacer un merge completo. Así, gracias a cherry-pick, podríamos aplicar los commits relacionados con nuestra funcionalidad en la rama master sin necesidad de hacer un merge.
+  Git Cherry-pick es un comando que permite tomar uno o varios commits de otra rama sin tener que hacer un merge completo. Así, gracias a cherry-pick, podríamos aplicar los commits relacionados con nuestra funcionalidad en la rama master sin necesidad de hacer un merge.
 
 Para demostrar cómo utilizar git cherry-pick, supongamos que tenemos un repositorio con el siguiente estado de rama:
 
-a -b - c - d   Master
-         \
-           e - f - g Feature
+a -b - c - d Master
+\
+ e - f - g Feature
 
 El uso de git cherry-pick es sencillo y se puede ejecutar de la siguiente manera:
 
@@ -142,9 +142,9 @@ git cherry-pick f
 
 Una vez ejecutado, el historial de Git se verá así:
 
-a -b - c - d - f   Master
-         \
-           e - f - g Feature
+a -b - c - d - f Master
+\
+ e - f - g Feature
 
 La confirmación f se ha sido introducido con éxito en la rama de funcionalidad
 
@@ -303,11 +303,25 @@ fatal: remote origin already exists.
 git remote rm origin
 
 Modificar un commit:
-git commit --amend. (Esto aplica para el último commit)
+Ejemplo -> Si quiero modificar el titulo del commit
+git commit --amend (Esto aplica para el último commit)
 fn + i (para comenzar a editar)
 esc
 :wq (para guardar)
 git push --force (Se refleja el cambio en github)
+
+Ejemplo -> Si se me olvidó agregar un archivo al último commit
+git add nombreArchivo
+git commit --amend (Esto aplica para el último commit)
+fn + i (para comenzar a editar)
+esc
+:wq (para guardar)
+git push --force (Se refleja el cambio en github)
+
+Este comando sirve para agregar archivos nuevos o actualizar el commit anterior y no generar commits innecesarios. También es una forma sencilla de editar o agregar comentarios al commit anterior porque abrirá la consola para editar este commit anterior.
+
+Atención
+Usar amend es una mala práctica, sobre todo cuando ya se ha hecho push o pull al repositorio remoto. Al momento de hacer amend con algún commit que esté en remoto, va a generar un conflicto que se va a arreglar haciendo un commit adicional y se perderá el beneficio del amend.
 
 Hacer push de una rama local a github (Pushes a local branch to the origin remote):
 git push origin <branch_name>
