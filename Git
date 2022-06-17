@@ -105,6 +105,25 @@ El cambio más reciente (al crear un stash) SIEMPRE recibe el valor 0 y los que 
 Al crear un stash tomará los archivos que han sido modificados y eliminados. Para que tome un archivo creado es necesario agregarlo al Staging Area con git add [nombre_archivo] con la intención de que git tenga un seguimiento de ese archivo, o también utilizando el comando git stash -u (que guardará en el stash los archivos que no estén en el staging).
 Al aplicar un stash este no se elimina, es buena práctica eliminarlo.
 
+- git clean
+Mientras estamos trabajando en un repositorio podemos añadir archivos a él, que realmente no forma parte de nuestro directorio de trabajo, archivos que no se deberían de agregar al repositorio remoto.
+
+El comando clean actúa en archivos sin seguimiento, este tipo de archivos son aquellos que se encuentran en el directorio de trabajo, pero que aún no se han añadido al índice de seguimiento de repositorio con el comando add.
+
+$ git clean
+
+La ejecución del comando predeterminado puede producir un error. La configuración global de Git obliga a usar la opción force con el comando para que sea efectivo. Se trata de un importante mecanismo de seguridad ya que este comando no se puede deshacer.
+
+Revisar que archivos no tienen seguimiento.
+$ git clean --dry-run
+
+Eliminar los archivos listados de no seguimiento.
+$ git clean -f
+
+Nota:  ejecuta git clean --dry-run, y cuando estés seguro de que desea eliminarlos, ejecutas git clean -f
+
+Archivos que se hayan modificado o editados git clean no interviene aquí.
+
 - git init
   - creates a new Git repository
 - git status
