@@ -226,3 +226,76 @@ recursiva(numeritos);
 RORO: es un patrón de diseño que consiste en crear una función que devuelve un objeto.
 RO -> Recibir un objeto
 RO -> Retornar un objeto
+
+Promesas: Las promesas son los conceptos básicos de la programación asíncrona en JavaScript.
+
+¿Qué significa asíncrono?
+El término asíncrono se refiere al concepto de que más de una cosa ocurre al mismo tiempo, o múltiples cosas relacionadas ocurren sin esperar a que la previa se haya completado.
+
+¿Qué es la programación asíncrona?
+La programación asíncrona es un método de programación que permite que diferentes partes del código se ejecuten en diferentes momentos, en lugar de hacerlo inmediatamente.
+
+Esto se requiere principalmente cuando queremos obtener información de algún servidor remoto y escribir código que haga algo con lo que devolvió el servidor.
+
+El Objeto Promesa:
+Una promesa es un objeto nativo de JavaScript que tiene dos características: 1. Recibe un único argumento que es una función. Esta función necesita tener dos argumentos, una función de resolución y una función de rechazo. El código escrito dentro de la promesa necesita usar una de estas dos funciones. 2. Se puede esperar usando el método then (y otros métodos similares) o la instrucción await.
+
+Una función asíncrona se define por una función que, en lugar de devolver el valor que se suponía que debía devolver, devuelve un objeto Promesa, que eventualmente se resolverá y le dará la respuesta al usuario.
+
+Async and Await:
+
+---
+
+## Arreglos -> Métodos más usados:
+
+foreach: Este método sirve para iterar sobre cada elemento del arreglo.
+
+const letters = ["a", "b", "c", "d", "e"];
+
+letters.forEach((element) => {
+console.log(element);
+});
+
+a
+b
+c
+d
+e
+
+---
+
+Map: Crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.
+
+es INMUTABLE por lo tanto no modifica el array original, sino que crea uno nuevo con la “transformación” aplicada.
+
+Además, mantienes el mismo length que el array original, te devuelve en el nuevo array la misma cantidad que el array que le aplicaste el método.
+
+Nota: forEach() no crea o devuelve, por defecto, un nuevo array con los elementos modificados, en cambio .map() si.
+
+const numbers = [1, 2, 3, 4, 5];
+numbers.map((item) => console.log(item \* 2));
+
+2
+4
+6
+8
+10
+
+---
+
+Filter: Lo que hace es filtrar el array original en base a una condición, los que la cumplan estarán en el nuevo array creado.
+
+Por lo tanto filter() es inmutable y el nuevo array creado solamente puede contener:
+
+- cero coincidencias
+- todas coincidencias
+- algunas coincidencias
+  Pero nunca más coincidencias que el tamaño del array original.
+
+  ***
+
+Reduce: Este método REDUCE, efectivamente hace eso. Solo reduce a un solo valor y no devuelve otro array, simplemente un valor.
+
+Se utiliza muchísimo para hacer cálculos a partir de la información de un array.
+
+En su composición, a primeras, tiene como argumentos de la función del primer parámetro, al acumulador y como segundo parámetro al elemento por el que va iterando el loop. Y como segundo argumento del reduce(), se pasa el valor inicial del acumulador.
